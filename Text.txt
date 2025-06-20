@@ -1,0 +1,10 @@
+pest-control-quotation-generator/
+│
+├── index.html          # Main application page
+├── style.css           # Styling for the application
+├── script.js           # Main JavaScript logic
+├── pdfGenerator.js     # PDF generation functionality
+├── README.md           # Project documentation
+└── assets/             # Additional assets
+    ├── logo.png        # Company logo
+    └── fonts/          # Custom fonts if needed

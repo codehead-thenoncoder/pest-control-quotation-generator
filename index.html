@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acuity Pest Control - Quotation Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quotation Generator</h1>
+            <img src="assets/logo.png" alt="Acuity Pest Control Logo" class="logo">
+        </header>
+
+        <form id="quotationForm">
+            <h2>Company Information</h2>
+            <div class="form-group">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="serviceAddress">Service Address:</label>
+                <textarea id="serviceAddress" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="tel" id="mobileNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gstin">GSTIN No.:</label>
+                <input type="text" id="gstin">
+            </div>
+
+            <h2>Services</h2>
+            <div id="servicesContainer">
+                <div class="service-item">
+                    <div class="form-group">
+                        <label>Service Type:</label>
+                        <select class="serviceType">
+                            <option value="Cockroach Pest Management Services">Cockroach Pest Management Services</option>
+                            <option value="Rodent Management Services">Rodent Management Services</option>
+                            <option value="General Pest Control">General Pest Control</option>
+                            <option value="Termite Control">Termite Control</option>
+                            <option value="Mosquito Control">Mosquito Control</option>
+                            <option value="Bed Bug Treatment">Bed Bug Treatment</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Area:</label>
+                        <input type="text" class="serviceArea" placeholder="e.g., 42 Room or 1 Kitchen area">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Frequency:</label>
+                        <select class="serviceFrequency">
+                            <option value="Monthly Once">Monthly Once</option>
+                            <option value="Quarterly">Quarterly</option>
+                            <option value="Half Yearly">Half Yearly</option>
+                            <option value="Yearly">Yearly</option>
+                            <option value="One Time">One Time</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Amount (₹):</label>
+                        <input type="number" class="serviceAmount" min="0">
+                    </div>
+                    
+                    <button type="button" class="removeService">Remove</button>
+                </div>
+            </div>
+            
+            <button type="button" id="addService">Add Another Service</button>
+            
+            <div class="form-group">
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks">Above Quotation Will Be Charged Per Month. It's excluded 18% GST.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="validity">Quotation Validity (days):</label>
+                <input type="number" id="validity" value="30" min="1">
+            </div>
+            
+            <button type="submit">Generate Quotation</button>
+        </form>
+        
+        <div id="previewSection" class="hidden">
+            <h2>Quotation Preview</h2>
+            <div id="pdfPreview"></div>
+            <button id="downloadPdf">Download PDF</button>
+            <button id="newQuotation">Create New Quotation</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="pdfGenerator.js"></script>
+</body>
+</html>
