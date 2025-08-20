@@ -11,11 +11,11 @@ function generatePDF(formData) {
     
     doc.setFontSize(10);
     doc.setTextColor(100, 100, 100);
-    doc.text('Office: Off No. 29, 1st Floor, 6th Cross, MC Industrial Layout, JP Nagar 7th Phase,', 105, 30, { align: 'center' });
-    doc.text('Chunchghatta Main Road, Bangalore 560078', 105, 35, { align: 'center' });
-    doc.text('Contact: +91 9941229005 | +91 9845640219', 105, 40, { align: 'center' });
-    doc.text('Mail: acuitypestcontrol@gmail.com', 105, 45, { align: 'center' });
-    doc.text('Web: www.acuitypestcontrols.com / www.acuitypestcontrol.com', 105, 50, { align: 'center' });
+    //doc.text('Office: Off No. 29, 1st Floor, 6th Cross, MC Industrial Layout, JP Nagar 7th Phase,', 105, 30, { align: 'center' });
+    //doc.text('Chunchghatta Main Road, Bangalore 560078', 105, 35, { align: 'center' });
+    //doc.text('Contact: +91 9941229005 | +91 9845640219', 105, 40, { align: 'center' });
+    //doc.text('Mail: acuitypestcontrol@gmail.com', 105, 45, { align: 'center' });
+    //doc.text('Web: www.acuitypestcontrols.com / www.acuitypestcontrol.com', 105, 50, { align: 'center' });
     
     // Add quote info table
     doc.autoTable({
@@ -78,11 +78,11 @@ function generatePDF(formData) {
     doc.text('1. Payment Can Be Made By Cash, Cheque, NEFT & IMPS', 20, doc.lastAutoTable.finalY + 35);
     doc.text('2. Payment should be made after completed the work', 20, doc.lastAutoTable.finalY + 40);
     doc.text(`3. This Quotation Will Be Valid For Only ${formData.validity} Days`, 20, doc.lastAutoTable.finalY + 45);
-    doc.text('4. Our Bank Details for Making Payment:', 20, doc.lastAutoTable.finalY + 50);
-    doc.text('➢ Bank Name: ICICI Bank', 25, doc.lastAutoTable.finalY + 55);
-    doc.text('➢ Branch: J.P. Nagar', 25, doc.lastAutoTable.finalY + 60);
-    doc.text('➢ Account No.: 040105003200', 25, doc.lastAutoTable.finalY + 65);
-    doc.text('➢ IFSC Code: ICIC0000401', 25, doc.lastAutoTable.finalY + 70);
+    //doc.text('4. Our Bank Details for Making Payment:', 20, doc.lastAutoTable.finalY + 50);
+    //doc.text('➢ Bank Name: ICICI Bank', 25, doc.lastAutoTable.finalY + 55);
+    //doc.text('➢ Branch: J.P. Nagar', 25, doc.lastAutoTable.finalY + 60);
+    //doc.text('➢ Account No.: 040105003200', 25, doc.lastAutoTable.finalY + 65);
+    //doc.text('➢ IFSC Code: ICIC0000401', 25, doc.lastAutoTable.finalY + 70);
     
     // Save the PDF or display it
     const pdfOutput = doc.output('datauristring');
